@@ -31,7 +31,7 @@ Ffunc = @funobj.grad;
 Jfunc = @funobj.hess;
 
 % Initial estimate of a zero of F.
-x0 = [10;20];
+x0 = [20;40];
 
 % Open a file for printing.
 outfileID = fopen('test_newton.out','w+');
