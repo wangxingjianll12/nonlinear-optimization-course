@@ -31,17 +31,17 @@ f_hand = @funobj.func;
 g_hand = @funobj.grad;
 
 % Initial estimate of a minimizer of f.
-x0 = [10;20];
+x0 = [50;100];
 
 % Open a file for printing.
 outfileID = fopen('test_steepest_descent.out','w+');
 
 % Control parameters in structure params.
-params.maxiter    = 1e+4;         % Used for all problems.
+params.maxiter    = 1e+5;         % Used for all problems.
 params.printlevel = 1;            % Used for all problems.
-params.tol        = 1e-4;         % Used for all problems.
+params.tol        = 1e-5;         % Used for all problems.
 params.stepchoice = 'fixed';      % Used for all problems.
-params.stepsize   = 1e-1;         % Used for all problems.
+params.stepsize   = 1e-5;         % Used for all problems.
 params.outfileID  = outfileID;    % Used for all problems.
 params.probname   = 'Rosenbrock'; % CHANGES for each new problem below.
 
