@@ -1,0 +1,17 @@
+------------------------------------------------------------
+                     Newton's Method 
+------------------------------------------------------------
+ maximum iterations    : 30
+ print level           : 1
+ termination tolerance : 1.00e-05
+ file for output       : test_newton.out
+ problem name          : Rosenbrock
+------------------------------------------------------------
+  Iter      Norm-F         Norm-x       Norm-step    Warning
+     0  1.3380077e+09  2.5000000e+02  2.2299990e+04     -    
+     1  2.9800000e+02  2.2500490e+04
+
+ Result     : Relative stopping tolerance reached 
+ Iterations : 1    
+ Final |F|  : 2.9800000e+02
+------------------------------------------------------------
