@@ -18,24 +18,27 @@ function [B, flag] = modNewton(H, lam_min, lam_max)
 
 % Check whether enough input parameters were supplied 
 if nargin < 3
-    error('modNewton(ERROR):not enough input parameters.')
+    error('\n modNewton(ERROR):not enough input parameters. \n')
 end
 % Check whether H is symmetric 
 if ~isequal(H,H')
-    error('H should be a symmetric matrix.')
+    error('\n H should be a symmetric matrix. \n')
 end
 % Check whether lam_min is greater than zero
 if lam_min <= 0
-    error('lam_min should be greter than zero.')
+    error('\n lam_min should be greter than zero. \n')
 end
 % Check whether lam_max is greater than lam_min
 if lam_max <= lam_min
-    error('lam_max should be greater than zero.')
+    error('\n lam_max should be greater than zero. \n')
+end
+% Check whether lam_max is beyond the precision limit
+if lam_max > 1/eps(2/3)
+    error('\n lam_max should be less than the machine precision \n')
 end
 
 % Compute Spectral Decomposition
-[V, D] = eig(H);
-lam = diag(D);
+[V, lam] = eig(full(H), 'vector');
 mod_lam = zeros(length(lam),1);
 
 % Modify the eigen values
