@@ -346,7 +346,7 @@ fun_hands.Hv = @funobj.hessvecprod;
 fun_hands.n  = funobj.n;
 
 % Initial estimate of a minimize of f.
-x0 = rand(funobj.n, 1);
+x0 = ones(funobj.n, 1)*0.1;
 
 % Name of function.
 params.probname = 'Logistic (data:leu)';
@@ -375,7 +375,7 @@ fun_hands.Hv = @funobj.hessvecprod;
 fun_hands.n  = funobj.n;
 
 % Initial estimate of a minimize of f.
-x0 = zeros(size(funobj.A,2), 1);
+x0 = ones(funobj.n, 1)*0.1;
 
 % Name of function.
 params.probname = 'Logistic (data:phishing)';
