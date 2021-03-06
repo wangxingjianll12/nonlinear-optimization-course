@@ -21,7 +21,8 @@ if nargin < 3
     error('\n modNewton(ERROR):not enough input parameters. \n')
 end
 % Check whether H is symmetric 
-if ~isequal(H,H')
+% There may be some numerical errors if comparing H and H' directly
+if max(max(H-H')) > 1e-6
     error('\n H should be a symmetric matrix. \n')
 end
 % Check whether lam_min is greater than zero
