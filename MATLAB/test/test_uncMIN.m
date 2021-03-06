@@ -26,7 +26,7 @@ params.outfileID  = outfileID;
 %                                   6.1 - Logistic Regression diabetes
 %                                   6.2 - Logistic Regression leu
 %                                   6.3 - Logistic Regression phishing
-det = 6.1;
+det = 6.2;
 
 % Save a dashed line for printing.
 dashedline = repelem('-',1,93);
@@ -346,7 +346,7 @@ fun_hands.Hv = @funobj.hessvecprod;
 fun_hands.n  = funobj.n;
 
 % Initial estimate of a minimize of f.
-x0 = zeros(size(funobj.A,2), 1);
+x0 = rand(funobj.n, 1);
 
 % Name of function.
 params.probname = 'Logistic (data:leu)';
