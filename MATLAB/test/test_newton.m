@@ -31,7 +31,7 @@ Ffunc = @funobj.grad;
 Jfunc = @funobj.hess;
 
 % Initial estimate of a zero of F.
-x0 = [20;40];
+x0 = [10;20];
 
 % Open a file for printing.
 outfileID = fopen('test_newton.out','w+');
@@ -79,8 +79,8 @@ props.n       = 100;
 props.density = 0.2;
 props.rc      = 1e-2;
 props.kind    = 1;
-props.g_mean  = 1;
-props.g_sd    = 1;
+props.c_mean  = 1;
+props.c_sd    = 1;
 funobj        = Quadratic(props);
 
 % Define function handles for computing F and its Jacobian J.
